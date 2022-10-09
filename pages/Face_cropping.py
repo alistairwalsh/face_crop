@@ -1,5 +1,7 @@
 import cv2
 import mediapipe as mp
+from PIL import Image
+
 mp_face_detection = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
 
@@ -22,3 +24,23 @@ with mp_face_detection.FaceDetection(
           detection, mp_face_detection.FaceKeyPoint.NOSE_TIP))
       mp_drawing.draw_detection(annotated_image, detection)
     cv2.imwrite('/tmp/annotated_image' + str(idx) + '.png', annotated_image)
+
+image_1 = Image.open('/tmp/annotated_image0.png')
+image_2 = Image.open('/tmp/annotated_image1.png')
+image_3 = Image.open('/tmp/annotated_image2.png')
+image_4 = Image.open('/tmp/annotated_image3.png')
+
+col1, col2, col3 = st.columns([1,6,1])
+
+with col1:
+    st.write("")
+
+with col2:
+    st.title("Face cropping")
+    st.image(image_1)
+    st.image(image_2)
+    st.image(image_3)
+    st.image(image_4)
+
+with col3:
+    st.write("")
