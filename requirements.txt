@@ -1,0 +1,4 @@
+mediapipe
+Pillow
+numpy
+opencv_python_headless
