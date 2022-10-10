@@ -9,13 +9,11 @@ mp_drawing = mp.solutions.drawing_utils
 # For static images:
 faces = ['face_1.jpg','face_2.jpg','face_3.jpg','face_4.jpg']
 IMAGE_FILES = st.selectbox(label = 'Select a face', options = faces, index=0)
-st.write(IMAGE_FILES)
 
 with mp_face_detection.FaceDetection(
     model_selection=1, min_detection_confidence=0.2) as face_detection:
   for idx, file in enumerate([IMAGE_FILES]):
     image = cv2.imread(file)
-    st.image(image)
     # Convert the BGR image to RGB and process it with MediaPipe Face Detection.
     results = face_detection.process(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 
