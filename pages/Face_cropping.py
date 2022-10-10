@@ -20,8 +20,8 @@ with mp_face_detection.FaceDetection(
       continue
     annotated_image = image.copy()
     for detection in results.detections:
-      print('Nose tip:')
-      print(mp_face_detection.get_key_point(
+      st.write('Nose tip:')
+      st.write(mp_face_detection.get_key_point(
           detection, mp_face_detection.FaceKeyPoint.NOSE_TIP))
       mp_drawing.draw_detection(annotated_image, detection)
     #cv2.imwrite('annotated_image' + str(idx) + '.png', annotated_image)
