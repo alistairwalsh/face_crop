@@ -21,6 +21,7 @@ with mp_face_detection.FaceDetection(
 
     # Draw face detections of each face.
     if not results.detections:
+        st.write('no face detected')
       continue
     annotated_image = image.copy()
     for detection in results.detections:
