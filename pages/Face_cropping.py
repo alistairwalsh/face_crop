@@ -12,7 +12,7 @@ IMAGE_FILES = st.selectbox(label = 'Select a face', options = faces, index=0)
 st.write(IMAGE_FILES)
 #IMAGE_FILES = ['face_1.jpg']
 with mp_face_detection.FaceDetection(
-    model_selection=1, min_detection_confidence=0.5) as face_detection:
+    model_selection=1, min_detection_confidence=0.2) as face_detection:
   for idx, file in enumerate([IMAGE_FILES]):
     image = cv2.imread(file)
     st.image(image)
