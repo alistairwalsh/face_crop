@@ -15,6 +15,7 @@ with mp_face_detection.FaceDetection(
     model_selection=1, min_detection_confidence=0.5) as face_detection:
   for idx, file in enumerate(IMAGE_FILES):
     image = cv2.imread(file)
+    st.image(image)
     # Convert the BGR image to RGB and process it with MediaPipe Face Detection.
     results = face_detection.process(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 
