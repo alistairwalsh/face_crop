@@ -7,7 +7,7 @@ mp_face_detection = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
 
 # For static images:
-faces = ['../face_1.jpg','../face_2.jpg','../face_3.jpg','../face_4.jpg']
+faces = ['face_1.jpg','face_2.jpg','face_3.jpg','face_4.jpg']
 IMAGE_FILES = st.selectbox(label = 'Select a face', options = faces, index=0)
 st.write(IMAGE_FILES)
 #IMAGE_FILES = ['face_1.jpg']
