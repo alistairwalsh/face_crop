@@ -9,6 +9,7 @@ mp_drawing = mp.solutions.drawing_utils
 # For static images:
 faces = ['face_1.jpg','face_2.jpg','face_3.jpg','face_4.jpg']
 IMAGE_FILES = st.selectbox(label = 'Select a face', options = faces, index=0)
+st.write(IMAGE_FILES)
 #IMAGE_FILES = ['face_1.jpg']
 with mp_face_detection.FaceDetection(
     model_selection=1, min_detection_confidence=0.5) as face_detection:
